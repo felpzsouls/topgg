@@ -5,7 +5,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.DirectMessages] });
 const userData = require('./models/user')
-const mongoose = require('moongoose');
+const mongoose = require('mongoose');
 app.use(express.json());
 
 client.once('ready', () => {
