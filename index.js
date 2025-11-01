@@ -51,7 +51,7 @@ app.post('/webhook', async (req, res) => {
                 const dmEmbed = new EmbedBuilder()
                     .setColor('#00FF00')
                     .setTitle('✨ Obrigado por votar!')
-                    .setDescription('Seu voto foi registrado com sucesso! Agradecemos muito seu apoio. 💚')
+                    .setDescription(`Seu voto foi registrado com sucesso! Agradecemos muito seu apoio. 💚 \n E como agradecimento te darei 500 whiskers!`)
                     .setTimestamp(); await user.send({ embeds: [dmEmbed] });
                 console.log('✅ DM de agradecimento enviada ao usuário'); // dar recompensa de 500 whiskers ao usuário 
                 const userDB = await userData.findOne({ id: userId });
